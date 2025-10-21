@@ -1,0 +1,38 @@
+<p-dialog [(visible)]="visible" [modal]="true"[closable]="false"[draggable]="false" [resizable]="false">
+  <ng-template pTemplate="body">
+    <div class="dialog-content">
+      <h1>Cuenta 1</h1>
+        <p-inputgroup class="input-group">
+          <p-inputgroup-addon>$</p-inputgroup-addon>
+          <p-inputNumber
+            [(ngModel)]="amount"
+            placeholder="Monto"
+            [min]="0"
+            [max]="10000"
+            [minFractionDigits]="2"
+            [maxFractionDigits]="2"
+            mode="decimal"
+          />
+          <p-inputgroup-addon>.00</p-inputgroup-addon>
+        </p-inputgroup>
+    </div>
+  </ng-template>
+
+  <ng-template pTemplate="footer">
+    <div class="footer-buttons">
+      <p-button
+        label="Cancelar"
+        [rounded]="true"
+        severity="danger"
+        (click)="cancel()"
+      />
+      <p>Insertar monto</p>
+      <p-button
+        label="Continuar"
+        [rounded]="true"
+        severity="success"
+        (click)="continue()"
+      />
+    </div>
+  </ng-template>
+</p-dialog>

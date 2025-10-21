@@ -1,0 +1,25 @@
+
+<p-dialog [(visible)]="visible" [modal]="true"[closable]="false"[draggable]="false" [resizable]="false">
+  <ng-template pTemplate="body">
+
+    <div class="wrapper">
+      <div class="icon-container">
+        <i
+        [class]="isFingerprintRegistered  ? 'pi pi-unlock' : 'pi pi-lock'"
+        class="icon-clickable"
+        (click)="toggleIcon()"
+      ></i>
+      </div>
+      <h1>{{ isFingerprintRegistered ? 'Huella leida' : 'Coloque su huella' }}</h1>
+    </div>
+
+  </ng-template>
+
+  <ng-template pTemplate="footer">
+    <div class="footer-buttons">
+      <p-button label="Cancelar" [rounded]="true" severity="danger" (click)="cancel()" />
+      <i id="icon-triangle" class="pi pi-exclamation-triangle" (click)="readError()"></i>
+      <p-button label="Continuar" [rounded]="true" severity="success" (click)="continue()" />
+    </div>
+  </ng-template>
+</p-dialog>

@@ -1,0 +1,38 @@
+
+<p-dialog [(visible)]="visible" [modal]="true"[closable]="false"[draggable]="false" [resizable]="false">
+  <ng-template pTemplate="header">
+    <div class="dialog-header">
+    <h1>Cuenta 1</h1>
+    </div>
+  </ng-template>
+
+  <ng-template pTemplate="body">
+    <div class="amounts-grid">
+      <!-- Primera fila de montos -->
+      <div  class="amount-card" *ngFor="let amount of presetAmounts.slice(0, 3)"
+           (click)="selectAmount(amount)" [class.selected]="selectedAmount === amount">
+        {{ amount | currency:'COP':'symbol':'1.0-0' }}
+      </div>
+
+      <!-- Segunda fila de montos -->
+      <div class="amount-card" *ngFor="let amount of presetAmounts.slice(3, 5)"
+           (click)="selectAmount(amount)" [class.selected]="selectedAmount === amount">
+        {{ amount | currency:'COP':'symbol':'1.0-0' }}
+      </div>
+
+      <!-- Campo para monto personalizado -->
+       <div class="amount-card" (click)="showCustomAmountDialog()">
+            <h2>INSERTAR MONTO</h2>
+      </div>
+    </div>
+  </ng-template>
+
+  <ng-template pTemplate="footer">
+    <div class="footer-buttons">
+      <p-button label="Cancelar" [rounded]="true" severity="danger" (click)="cancel()" />
+      <p style="text-align: center; margin-top: 0.5rem">Seleccione el monto a retirar</p>
+      <p-button label="Continuar" [rounded]="true" severity="success"
+                (click)="continue()" [disabled]="!selectedAmount && !customAmount" />
+    </div>
+  </ng-template>
+</p-dialog>

@@ -1,0 +1,13 @@
+
+<p-dialog [(visible)]="visible" [modal]="true"[closable]="false"[draggable]="false" [resizable]="false">
+  <ng-template pTemplate="body">
+    <h1>¿Desea retirar dinero usando su huella?</h1>
+  </ng-template>
+  
+  <ng-template pTemplate="footer">
+    <div class="footer-buttons">
+      <p-button label="Cancelar" [rounded]="true" severity="danger" (click)="cancel()" />
+      <p-button label="Continuar" [rounded]="true" severity="success" (click)="continue()" />
+    </div>
+  </ng-template>
+</p-dialog>

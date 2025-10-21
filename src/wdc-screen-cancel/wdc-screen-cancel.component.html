@@ -1,0 +1,14 @@
+
+<p-dialog [(visible)]="visible" [modal]="true"[closable]="false"[draggable]="false" [resizable]="false">
+  <ng-template pTemplate="body">
+    <h1>¿Está seguro de que desea cancelar la operación?</h1>
+    <div class="icon-container"><i class="pi pi-exclamation-triangle"></i></div>
+  </ng-template>
+
+  <ng-template pTemplate="footer">
+    <div class="footer-buttons">
+      <p-button label="Cancelar" [rounded]="true" severity="danger" (click)="cancel()" />
+      <p-button label="Aceptar" [rounded]="true" severity="success" (click)="continue()" />
+    </div>
+  </ng-template>
+</p-dialog>

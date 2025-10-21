@@ -1,0 +1,42 @@
+/* En tu archivo de estilos del componente */
+:host ::ng-deep .accounts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  padding: 1rem;
+}
+
+::ng-deep .p-dialog {
+  width: 70vw !important;
+  height: 80vh !important;
+}
+
+::ng-deep .p-dialog .p-dialog-content {
+  overflow: hidden !important;
+}
+
+.account-card {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 1.5rem;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.account-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  border-color: var(--primary-color);
+}
+
+.account-card.selected {
+  border: 2px solid var(--primary-color);
+  background-color: rgba(0, 123, 255, 0.05);
+}
+
+.footer-buttons {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}

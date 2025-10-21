@@ -1,0 +1,72 @@
+
+:host {
+  display: block;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+h1 {
+  font-size: 1.5rem;
+  margin: 0;
+  color: var(--text-color);
+  text-align: center;
+  padding-top: 1rem;
+}
+
+.icon-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+i {
+  font-size: 8.6rem;
+  color: var(--text-color);
+}
+
+.icon-clickable {
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+.icon-clickable:hover {
+  transform: scale(1.1);
+}
+.icon-clickable:active {
+  transform: scale(0.95);
+}
+
+#icon-triangle {
+  color: #ff0000;
+  font-size: 2rem;
+}
+
+#icon-triangle:hover {
+  color: #ff0000;
+  transform: scale(1.1);
+}
+
+.footer-buttons {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.p-dialog {
+  padding: 1.5rem;
+}
+
+::ng-deep .p-dialog {
+  width: 70vw !important;
+  height: 80vh !important;
+}
+
+::ng-deep .p-dialog .p-dialog-content {
+  overflow: hidden !important;
+}
+

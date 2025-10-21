@@ -1,0 +1,39 @@
+<p-dialog [(visible)]="visible" [modal]="true"[closable]="false"[draggable]="false" [resizable]="false">
+  <ng-template pTemplate="header">
+    <h1 style="margin: 0; text-align: center">Bienvenido USUARIO</h1>
+  </ng-template>
+
+  <ng-template pTemplate="body">
+    <div class="accounts-grid">
+      <!-- Tarjeta 1 -->
+      <div class="account-card" (click)="selectAccount(1)" [class.selected]="selectedAccount === 1">
+        <i class="pi pi-credit-card" style="font-size: 2rem"></i>
+        <h3>Cuenta 1</h3>
+        <p>****1234</p>
+      </div>
+
+      <!-- Tarjeta 2 -->
+      <div class="account-card" (click)="selectAccount(2)" [class.selected]="selectedAccount === 2">
+        <i class="pi pi-credit-card" style="font-size: 2rem"></i>
+        <h3>Cuenta 2</h3>
+        <p>****5678</p>
+      </div>
+
+      <!-- Tarjeta 3 -->
+      <div class="account-card" (click)="selectAccount(3)" [class.selected]="selectedAccount === 3">
+        <i class="pi pi-credit-card" style="font-size: 2rem"></i>
+        <h3>Cuenta 3</h3>
+        <p>****9012</p>
+      </div>
+    </div>
+  </ng-template>
+
+  <ng-template pTemplate="footer">
+    <div class="footer-buttons">
+      <p-button label="Cancelar" [rounded]="true" severity="danger" (click)="cancel()" />
+      <p style="text-align: center; margin-top: 0.5rem">Seleccione la cuenta que desea utilizar</p>
+      <p-button label="Continuar" [rounded]="true" severity="success" (click)="continue()"
+                [disabled]="!selectedAccount" />
+    </div>
+  </ng-template>
+</p-dialog>

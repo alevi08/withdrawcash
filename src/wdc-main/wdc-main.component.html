@@ -1,0 +1,14 @@
+
+<p-dialog [(visible)]="visible" [modal]="true" [closable]="false"
+          [draggable]="false" [resizable]="false">
+
+  <ng-template pTemplate="content">
+    <div class="image-container"> <!-- Contenedor flex -->
+      <p-image src="assets/images/LogoWDC.png"
+               alt="Logo WDC"
+               width="600"
+               [preview]="true">
+      </p-image>
+    </div>
+  </ng-template>
+</p-dialog>

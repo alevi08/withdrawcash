@@ -1,0 +1,43 @@
+
+:host {
+  display: block;
+}
+
+.footer-buttons {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.p-dialog {
+  padding: 1.5rem;
+}
+
+::ng-deep .p-dialog {
+  width: 70vw !important;
+  height: 80vh !important;
+}
+
+::ng-deep .p-dialog .p-dialog-content {
+  overflow: hidden !important;
+}
+.dialog-content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem; /* Espacio entre elementos */
+  margin-bottom: 1.5rem;
+}
+
+.input-group {
+  width: 50% !important;
+}
+
+
+
+
+
+
+
+

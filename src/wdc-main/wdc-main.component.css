@@ -1,0 +1,22 @@
+
+:host {
+  display: block;
+}
+
+.p-dialog {
+  padding: 1.5rem;
+}
+
+::ng-deep .p-dialog {
+  width: 70vw !important;
+  height: 80vh !important;
+}
+
+.image-container {
+  display: flex;
+  justify-content: center; /* Centrado horizontal */
+  align-items: center;    /* Centrado vertical */
+  height: 100%;           /* Ocupa todo el alto disponible */
+  padding: 1rem;/* Espaciado opcional */
+}
+
